@@ -1,0 +1,5 @@
+    <sql:setDataSource var="dataSource" user="root" password=""  url="jdbc:mysql://localhost:3306/j2ee" driver="com.mysql.cj.jdbc.Driver"/>
+              <sql:query var="rs" dataSource="${dataSource}">
+              Select chemin from imgpro where idProd=${p.idArticle} && type=0
+              </sql:query>
+              <c:forEach var="row" items="${rs.rows}">
